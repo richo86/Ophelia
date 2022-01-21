@@ -1,0 +1,28 @@
+  <dx-data-grid id="gridContainer"
+              [dataSource]="products"
+              [remoteOperations]="false"
+              [allowColumnReordering]="true"
+              [rowAlternationEnabled]="true"
+              [allowColumnResizing]="true"
+              [columnAutoWidth]="true"
+              [showBorders]="true">
+  <dxo-paging [pageSize]="10"></dxo-paging>
+  <dxi-column caption="Nombre" dataField="name" dataType="string" alignment="center" (click)="editProduct()"></dxi-column>
+  <dxi-column caption="Costo Producción"
+              dataField="productionCost"
+              dataType="number"
+              format="currency"
+              alignment="center"></dxi-column>
+  <dxi-column dataField="saleCost"
+              caption="Costo venta"
+              dataType="number"
+              format="currency"
+              alignment="center"></dxi-column>
+  <dxi-column caption="Cantidad" dataField="quantity" dataType="number" alignment="center"></dxi-column>
+  <dxi-column caption="Eliminar">Eliminar</dxi-column>
+  <dxo-editing mode="popup"
+               [allowUpdating]="true"
+               [allowDeleting]="false">
+  </dxo-editing>
+</dx-data-grid>
+

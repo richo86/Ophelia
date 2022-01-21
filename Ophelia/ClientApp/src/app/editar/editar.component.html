@@ -1,0 +1,13 @@
+<div class="container">
+  <dx-form id="form" [formData]="product">
+    <dxi-item itemType="group" cssClass="first-group" [colCount]="4">
+      <dxi-item itemType="group" [colSpan]="3">
+        <dxi-item [label]="{text: 'Nombre'}" dataField="Name" ></dxi-item>
+        <dxi-item [label]="{text: 'Costo de producción'}" dataField="ProductionCost" ></dxi-item>
+        <dxi-item [label]="{text: 'Costo de venta'}" dataField="SaleCost" ></dxi-item>
+        <dxi-item [label]="{text: 'Cantidad'}" dataField="Quantity" ></dxi-item>
+      </dxi-item>
+    </dxi-item>
+  </dx-form>
+  <button class="btn btn-primary" (click)="submit()">Enviar</button>
+</div>
